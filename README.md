@@ -13,10 +13,10 @@ Idea:
 @Inject
 IBeanTypeProvider provider;
 
-JvmDeclaredType someType = ...
-BBeanType beanType = provider.getType(someType);
+JvmDeclaredType itemEntity = ...
+BBeanType itemBean = provider.getType(itemEntity);
 
-BFeature feature = beanType.getFeatures().get(0);
+BFeature feature = itemBean.getFeatures().get(0);
 
 if(feature instanceof BSimpleFeature) {
 	JvmField field = feature.getJvmField();
@@ -24,6 +24,7 @@ if(feature instanceof BSimpleFeature) {
 	JvmOperation setter = feature.getJvmSetter();
 	
 	// lazy loading will create a new BeanTypesResource
-	BBeanType featureType = feature.getType();
+	// lets assume that the first feature points to warehouse in the entity
+	BBeanType entityBean = feature.getType();
 }
 ```
