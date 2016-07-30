@@ -43,7 +43,7 @@ IBeanTypeProvider provider;
 
 	// ----- order details -----
 
-	BSimpleFeature orderDetailsFeature = (BSimpleFeature) itemBean.getFeatures().get(1);
+	BCollectionFeature orderDetailsFeature = (BCollectionFeature) itemBean.getFeatures().get(1);
 	
 	JvmField field = orderDetailsFeature.getJvmField();
 	// may be null for collections
