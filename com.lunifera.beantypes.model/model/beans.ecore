@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="beantypes" nsURI="http://www.example.com/beantypes" nsPrefix="beantypes">
+  <eClassifiers xsi:type="ecore:EClass" name="BNameable" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="simpleName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="qualifiedName" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BAnnotation">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmAnnotationType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BAnnotationsable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="annotations" upperBound="-1"
+        eType="#//BAnnotation" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BProperty">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="key" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="value" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BPropertiesable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="properties" upperBound="-1"
+        eType="#//BProperty" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BFeaturesable" abstract="true" interface="true">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="features" upperBound="-1"
+        eType="#//BFeature" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BType" abstract="true" eSuperTypes="#//BNameable #//BFeaturesable #//BAnnotationsable #//BPropertiesable"/>
+  <eClassifiers xsi:type="ecore:EClass" name="BBeanType" eSuperTypes="#//BType">
+    <eOperations name="getIdFeature" eType="#//BSimpleFeature"/>
+    <eOperations name="getDomainKeyFeature" eType="#//BSimpleFeature"/>
+    <eOperations name="getDomainDescriptionFeature" eType="#//BSimpleFeature"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmDeclaredType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BPrimitiveType" eSuperTypes="#//BType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmPrimitiveType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BFeature" abstract="true" eSuperTypes="#//BNameable #//BAnnotationsable #//BPropertiesable">
+    <eOperations name="isMany" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isReadonly" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="getter" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="setter" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BSimpleFeature" eSuperTypes="#//BFeature">
+    <eOperations name="isId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isDomainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eOperations name="isDomainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//BType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BCollectionFeature" eSuperTypes="#//BSimpleFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="parameterType" lowerBound="1"
+        eType="#//BType"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="BMapFeature" eSuperTypes="#//BFeature">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="keyType" eType="#//BType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="valueType" eType="#//BType"/>
+  </eClassifiers>
+</ecore:EPackage>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.beans.model/src" modelPluginID="org.beans.model"
+    modelName="Beans" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    usedGenPackages="../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>beans.ecore</foreignModel>
+  <genPackages prefix="Beans" basePackage="com.lunifera" disposableProviderFactory="true"
+      ecorePackage="beans.ecore#/">
+    <genClasses image="false" ecoreClass="beans.ecore#//BNameable">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute beans.ecore#//BNameable/simpleName"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute beans.ecore#//BNameable/qualifiedName"/>
+    </genClasses>
+    <genClasses ecoreClass="beans.ecore#//BAnnotation">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BAnnotation/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BAnnotationsable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference beans.ecore#//BAnnotationsable/annotations"/>
+    </genClasses>
+    <genClasses ecoreClass="beans.ecore#//BProperty">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute beans.ecore#//BProperty/key"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute beans.ecore#//BProperty/value"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BPropertiesable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference beans.ecore#//BPropertiesable/properties"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BFeaturesable">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference beans.ecore#//BFeaturesable/features"/>
+    </genClasses>
+    <genClasses ecoreClass="beans.ecore#//BType"/>
+    <genClasses ecoreClass="beans.ecore#//BBeanType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BBeanType/type"/>
+      <genOperations ecoreOperation="beans.ecore#//BBeanType/getIdFeature"/>
+      <genOperations ecoreOperation="beans.ecore#//BBeanType/getDomainKeyFeature"/>
+      <genOperations ecoreOperation="beans.ecore#//BBeanType/getDomainDescriptionFeature"/>
+    </genClasses>
+    <genClasses ecoreClass="beans.ecore#//BPrimitiveType">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BPrimitiveType/type"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/field"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/getter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/setter"/>
+      <genOperations ecoreOperation="beans.ecore#//BFeature/isMany"/>
+      <genOperations ecoreOperation="beans.ecore#//BFeature/isReadonly"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BSimpleFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BSimpleFeature/type"/>
+      <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isId"/>
+      <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isDomainKey"/>
+      <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isDomainDescription"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BCollectionFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BCollectionFeature/parameterType"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="beans.ecore#//BMapFeature">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BMapFeature/keyType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BMapFeature/valueType"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
