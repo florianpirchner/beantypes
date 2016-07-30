@@ -9,7 +9,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated beans -->
       <package
-            uri="http://www.example.com/beans"
+            uri="http://www.example.com/beantypes"
             class="com.lunifera.beantypes.BeansPackage"
             genModel="model/beans.genmodel"/>
    </extension>

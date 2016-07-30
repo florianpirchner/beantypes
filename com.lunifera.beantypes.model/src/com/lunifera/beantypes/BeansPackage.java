@@ -31,7 +31,7 @@ public interface BeansPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNAME = "beans";
+	String eNAME = "beantypes";
 
 	/**
 	 * The package namespace URI.
@@ -39,7 +39,7 @@ public interface BeansPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://www.example.com/beans";
+	String eNS_URI = "http://www.example.com/beantypes";
 
 	/**
 	 * The package namespace name.
@@ -47,7 +47,7 @@ public interface BeansPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "beans";
+	String eNS_PREFIX = "beantypes";
 
 	/**
 	 * The singleton instance of the package.
@@ -635,13 +635,22 @@ public interface BeansPackage extends EPackage {
 	int BFEATURE__SETTER = BNAMEABLE_FEATURE_COUNT + 4;
 
 	/**
+	 * The feature id for the '<em><b>Field Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BFEATURE__FIELD_TYPE = BNAMEABLE_FEATURE_COUNT + 5;
+
+	/**
 	 * The number of structural features of the '<em>BFeature</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BFEATURE_FEATURE_COUNT = BNAMEABLE_FEATURE_COUNT + 5;
+	int BFEATURE_FEATURE_COUNT = BNAMEABLE_FEATURE_COUNT + 6;
 
 	/**
 	 * The operation id for the '<em>Is Many</em>' operation.
@@ -744,13 +753,13 @@ public interface BeansPackage extends EPackage {
 	int BSIMPLE_FEATURE__SETTER = BFEATURE__SETTER;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * The feature id for the '<em><b>Field Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BSIMPLE_FEATURE__TYPE = BFEATURE_FEATURE_COUNT + 0;
+	int BSIMPLE_FEATURE__FIELD_TYPE = BFEATURE__FIELD_TYPE;
 
 	/**
 	 * The number of structural features of the '<em>BSimple Feature</em>' class.
@@ -759,7 +768,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BSIMPLE_FEATURE_FEATURE_COUNT = BFEATURE_FEATURE_COUNT + 1;
+	int BSIMPLE_FEATURE_FEATURE_COUNT = BFEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The operation id for the '<em>Is Many</em>' operation.
@@ -832,7 +841,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__SIMPLE_NAME = BSIMPLE_FEATURE__SIMPLE_NAME;
+	int BCOLLECTION_FEATURE__SIMPLE_NAME = BFEATURE__SIMPLE_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Qualified Name</b></em>' attribute.
@@ -841,7 +850,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__QUALIFIED_NAME = BSIMPLE_FEATURE__QUALIFIED_NAME;
+	int BCOLLECTION_FEATURE__QUALIFIED_NAME = BFEATURE__QUALIFIED_NAME;
 
 	/**
 	 * The feature id for the '<em><b>Annotations</b></em>' containment reference list.
@@ -850,7 +859,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__ANNOTATIONS = BSIMPLE_FEATURE__ANNOTATIONS;
+	int BCOLLECTION_FEATURE__ANNOTATIONS = BFEATURE__ANNOTATIONS;
 
 	/**
 	 * The feature id for the '<em><b>Properties</b></em>' containment reference list.
@@ -859,7 +868,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__PROPERTIES = BSIMPLE_FEATURE__PROPERTIES;
+	int BCOLLECTION_FEATURE__PROPERTIES = BFEATURE__PROPERTIES;
 
 	/**
 	 * The feature id for the '<em><b>Field</b></em>' reference.
@@ -868,7 +877,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__FIELD = BSIMPLE_FEATURE__FIELD;
+	int BCOLLECTION_FEATURE__FIELD = BFEATURE__FIELD;
 
 	/**
 	 * The feature id for the '<em><b>Getter</b></em>' reference.
@@ -877,7 +886,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__GETTER = BSIMPLE_FEATURE__GETTER;
+	int BCOLLECTION_FEATURE__GETTER = BFEATURE__GETTER;
 
 	/**
 	 * The feature id for the '<em><b>Setter</b></em>' reference.
@@ -886,16 +895,16 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__SETTER = BSIMPLE_FEATURE__SETTER;
+	int BCOLLECTION_FEATURE__SETTER = BFEATURE__SETTER;
 
 	/**
-	 * The feature id for the '<em><b>Type</b></em>' reference.
+	 * The feature id for the '<em><b>Field Type</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__TYPE = BSIMPLE_FEATURE__TYPE;
+	int BCOLLECTION_FEATURE__FIELD_TYPE = BFEATURE__FIELD_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Parameter Type</b></em>' reference.
@@ -904,7 +913,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE__PARAMETER_TYPE = BSIMPLE_FEATURE_FEATURE_COUNT + 0;
+	int BCOLLECTION_FEATURE__PARAMETER_TYPE = BFEATURE_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>BCollection Feature</em>' class.
@@ -913,7 +922,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE_FEATURE_COUNT = BSIMPLE_FEATURE_FEATURE_COUNT + 1;
+	int BCOLLECTION_FEATURE_FEATURE_COUNT = BFEATURE_FEATURE_COUNT + 1;
 
 	/**
 	 * The operation id for the '<em>Is Many</em>' operation.
@@ -922,7 +931,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE___IS_MANY = BSIMPLE_FEATURE___IS_MANY;
+	int BCOLLECTION_FEATURE___IS_MANY = BFEATURE___IS_MANY;
 
 	/**
 	 * The operation id for the '<em>Is Readonly</em>' operation.
@@ -931,34 +940,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE___IS_READONLY = BSIMPLE_FEATURE___IS_READONLY;
-
-	/**
-	 * The operation id for the '<em>Is Id</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BCOLLECTION_FEATURE___IS_ID = BSIMPLE_FEATURE___IS_ID;
-
-	/**
-	 * The operation id for the '<em>Is Domain Key</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BCOLLECTION_FEATURE___IS_DOMAIN_KEY = BSIMPLE_FEATURE___IS_DOMAIN_KEY;
-
-	/**
-	 * The operation id for the '<em>Is Domain Description</em>' operation.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int BCOLLECTION_FEATURE___IS_DOMAIN_DESCRIPTION = BSIMPLE_FEATURE___IS_DOMAIN_DESCRIPTION;
+	int BCOLLECTION_FEATURE___IS_READONLY = BFEATURE___IS_READONLY;
 
 	/**
 	 * The number of operations of the '<em>BCollection Feature</em>' class.
@@ -967,7 +949,7 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int BCOLLECTION_FEATURE_OPERATION_COUNT = BSIMPLE_FEATURE_OPERATION_COUNT + 0;
+	int BCOLLECTION_FEATURE_OPERATION_COUNT = BFEATURE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link com.lunifera.beantypes.impl.BMapFeatureImpl <em>BMap Feature</em>}' class.
@@ -1041,6 +1023,15 @@ public interface BeansPackage extends EPackage {
 	 * @ordered
 	 */
 	int BMAP_FEATURE__SETTER = BFEATURE__SETTER;
+
+	/**
+	 * The feature id for the '<em><b>Field Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int BMAP_FEATURE__FIELD_TYPE = BFEATURE__FIELD_TYPE;
 
 	/**
 	 * The feature id for the '<em><b>Key Type</b></em>' reference.
@@ -1371,6 +1362,17 @@ public interface BeansPackage extends EPackage {
 	EReference getBFeature_Setter();
 
 	/**
+	 * Returns the meta object for the reference '{@link com.lunifera.beantypes.BFeature#getFieldType <em>Field Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Field Type</em>'.
+	 * @see com.lunifera.beantypes.BFeature#getFieldType()
+	 * @see #getBFeature()
+	 * @generated
+	 */
+	EReference getBFeature_FieldType();
+
+	/**
 	 * Returns the meta object for the '{@link com.lunifera.beantypes.BFeature#isMany() <em>Is Many</em>}' operation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1399,17 +1401,6 @@ public interface BeansPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getBSimpleFeature();
-
-	/**
-	 * Returns the meta object for the reference '{@link com.lunifera.beantypes.BSimpleFeature#getType <em>Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Type</em>'.
-	 * @see com.lunifera.beantypes.BSimpleFeature#getType()
-	 * @see #getBSimpleFeature()
-	 * @generated
-	 */
-	EReference getBSimpleFeature_Type();
 
 	/**
 	 * Returns the meta object for the '{@link com.lunifera.beantypes.BSimpleFeature#isId() <em>Is Id</em>}' operation.
@@ -1746,6 +1737,14 @@ public interface BeansPackage extends EPackage {
 		EReference BFEATURE__SETTER = eINSTANCE.getBFeature_Setter();
 
 		/**
+		 * The meta object literal for the '<em><b>Field Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference BFEATURE__FIELD_TYPE = eINSTANCE.getBFeature_FieldType();
+
+		/**
 		 * The meta object literal for the '<em><b>Is Many</b></em>' operation.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1770,14 +1769,6 @@ public interface BeansPackage extends EPackage {
 		 * @generated
 		 */
 		EClass BSIMPLE_FEATURE = eINSTANCE.getBSimpleFeature();
-
-		/**
-		 * The meta object literal for the '<em><b>Type</b></em>' reference feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EReference BSIMPLE_FEATURE__TYPE = eINSTANCE.getBSimpleFeature_Type();
 
 		/**
 		 * The meta object literal for the '<em><b>Is Id</b></em>' operation.

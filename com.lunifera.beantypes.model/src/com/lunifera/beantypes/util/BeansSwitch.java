@@ -155,7 +155,6 @@ public class BeansSwitch<T> extends Switch<T> {
 			case BeansPackage.BCOLLECTION_FEATURE: {
 				BCollectionFeature bCollectionFeature = (BCollectionFeature)theEObject;
 				T result = caseBCollectionFeature(bCollectionFeature);
-				if (result == null) result = caseBSimpleFeature(bCollectionFeature);
 				if (result == null) result = caseBFeature(bCollectionFeature);
 				if (result == null) result = caseBNameable(bCollectionFeature);
 				if (result == null) result = caseBAnnotationsable(bCollectionFeature);

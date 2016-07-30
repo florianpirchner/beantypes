@@ -23,6 +23,7 @@ import com.lunifera.beantypes.BFeature;
 import com.lunifera.beantypes.BMapFeature;
 import com.lunifera.beantypes.BPropertiesable;
 import com.lunifera.beantypes.BProperty;
+import com.lunifera.beantypes.BType;
 import com.lunifera.beantypes.BeansPackage;
 
 /**
@@ -37,6 +38,7 @@ import com.lunifera.beantypes.BeansPackage;
  *   <li>{@link com.lunifera.beantypes.impl.BFeatureImpl#getField <em>Field</em>}</li>
  *   <li>{@link com.lunifera.beantypes.impl.BFeatureImpl#getGetter <em>Getter</em>}</li>
  *   <li>{@link com.lunifera.beantypes.impl.BFeatureImpl#getSetter <em>Setter</em>}</li>
+ *   <li>{@link com.lunifera.beantypes.impl.BFeatureImpl#getFieldType <em>Field Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -92,6 +94,16 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 	 * @ordered
 	 */
 	protected JvmOperation setter;
+
+	/**
+	 * The cached value of the '{@link #getFieldType() <em>Field Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getFieldType()
+	 * @generated
+	 * @ordered
+	 */
+	protected BType fieldType;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -253,6 +265,44 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BType getFieldType() {
+		if (fieldType != null && fieldType.eIsProxy()) {
+			InternalEObject oldFieldType = (InternalEObject)fieldType;
+			fieldType = (BType)eResolveProxy(oldFieldType);
+			if (fieldType != oldFieldType) {
+				if (eNotificationRequired())
+					eNotify(new ENotificationImpl(this, Notification.RESOLVE, BeansPackage.BFEATURE__FIELD_TYPE, oldFieldType, fieldType));
+			}
+		}
+		return fieldType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public BType basicGetFieldType() {
+		return fieldType;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setFieldType(BType newFieldType) {
+		BType oldFieldType = fieldType;
+		fieldType = newFieldType;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, BeansPackage.BFEATURE__FIELD_TYPE, oldFieldType, fieldType));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
 	 */
 	public boolean isMany() { 
 		return this instanceof BCollectionFeature || this instanceof BMapFeature;
@@ -303,6 +353,9 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 			case BeansPackage.BFEATURE__SETTER:
 				if (resolve) return getSetter();
 				return basicGetSetter();
+			case BeansPackage.BFEATURE__FIELD_TYPE:
+				if (resolve) return getFieldType();
+				return basicGetFieldType();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -333,6 +386,9 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 			case BeansPackage.BFEATURE__SETTER:
 				setSetter((JvmOperation)newValue);
 				return;
+			case BeansPackage.BFEATURE__FIELD_TYPE:
+				setFieldType((BType)newValue);
+				return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -360,6 +416,9 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 			case BeansPackage.BFEATURE__SETTER:
 				setSetter((JvmOperation)null);
 				return;
+			case BeansPackage.BFEATURE__FIELD_TYPE:
+				setFieldType((BType)null);
+				return;
 		}
 		super.eUnset(featureID);
 	}
@@ -382,6 +441,8 @@ public abstract class BFeatureImpl extends BNameableImpl implements BFeature {
 				return getter != null;
 			case BeansPackage.BFEATURE__SETTER:
 				return setter != null;
+			case BeansPackage.BFEATURE__FIELD_TYPE:
+				return fieldType != null;
 		}
 		return super.eIsSet(featureID);
 	}

@@ -17,6 +17,7 @@ import org.eclipse.xtext.common.types.JvmOperation;
  *   <li>{@link com.lunifera.beantypes.BFeature#getField <em>Field</em>}</li>
  *   <li>{@link com.lunifera.beantypes.BFeature#getGetter <em>Getter</em>}</li>
  *   <li>{@link com.lunifera.beantypes.BFeature#getSetter <em>Setter</em>}</li>
+ *   <li>{@link com.lunifera.beantypes.BFeature#getFieldType <em>Field Type</em>}</li>
  * </ul>
  * </p>
  *
@@ -102,6 +103,32 @@ public interface BFeature extends BNameable, BAnnotationsable, BPropertiesable {
 	 * @generated
 	 */
 	void setSetter(JvmOperation value);
+
+	/**
+	 * Returns the value of the '<em><b>Field Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Field Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Field Type</em>' reference.
+	 * @see #setFieldType(BType)
+	 * @see com.lunifera.beantypes.BeansPackage#getBFeature_FieldType()
+	 * @model required="true"
+	 * @generated
+	 */
+	BType getFieldType();
+
+	/**
+	 * Sets the value of the '{@link com.lunifera.beantypes.BFeature#getFieldType <em>Field Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Field Type</em>' reference.
+	 * @see #getFieldType()
+	 * @generated
+	 */
+	void setFieldType(BType value);
 
 	/**
 	 * <!-- begin-user-doc -->

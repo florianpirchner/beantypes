@@ -24,7 +24,7 @@ import com.lunifera.beantypes.BeansPackage;
  *
  * @generated
  */
-public class BCollectionFeatureImpl extends BSimpleFeatureImpl implements BCollectionFeature {
+public class BCollectionFeatureImpl extends BFeatureImpl implements BCollectionFeature {
 	/**
 	 * The cached value of the '{@link #getParameterType() <em>Parameter Type</em>}' reference.
 	 * <!-- begin-user-doc -->

@@ -42,14 +42,15 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="field" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmField"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="getter" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="setter" eType="ecore:EClass platform:/plugin/org.eclipse.xtext.common.types/model/JavaVMTypes.ecore#//JvmOperation"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="fieldType" lowerBound="1"
+        eType="#//BType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="BSimpleFeature" eSuperTypes="#//BFeature">
     <eOperations name="isId" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isDomainKey" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
     <eOperations name="isDomainDescription" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="type" lowerBound="1" eType="#//BType"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="BCollectionFeature" eSuperTypes="#//BSimpleFeature">
+  <eClassifiers xsi:type="ecore:EClass" name="BCollectionFeature" eSuperTypes="#//BFeature">
     <eStructuralFeatures xsi:type="ecore:EReference" name="parameterType" lowerBound="1"
         eType="#//BType"/>
   </eClassifiers>

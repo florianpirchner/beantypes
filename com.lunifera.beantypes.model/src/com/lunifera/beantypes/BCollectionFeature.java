@@ -19,7 +19,7 @@ package com.lunifera.beantypes;
  * @model
  * @generated
  */
-public interface BCollectionFeature extends BSimpleFeature {
+public interface BCollectionFeature extends BFeature {
 	/**
 	 * Returns the value of the '<em><b>Parameter Type</b></em>' reference.
 	 * <!-- begin-user-doc -->

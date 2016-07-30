@@ -427,6 +427,15 @@ public class BeansPackageImpl extends EPackageImpl implements BeansPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getBFeature_FieldType() {
+		return (EReference)bFeatureEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EOperation getBFeature__IsMany() {
 		return bFeatureEClass.getEOperations().get(0);
 	}
@@ -447,15 +456,6 @@ public class BeansPackageImpl extends EPackageImpl implements BeansPackage {
 	 */
 	public EClass getBSimpleFeature() {
 		return bSimpleFeatureEClass;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EReference getBSimpleFeature_Type() {
-		return (EReference)bSimpleFeatureEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -593,11 +593,11 @@ public class BeansPackageImpl extends EPackageImpl implements BeansPackage {
 		createEReference(bFeatureEClass, BFEATURE__FIELD);
 		createEReference(bFeatureEClass, BFEATURE__GETTER);
 		createEReference(bFeatureEClass, BFEATURE__SETTER);
+		createEReference(bFeatureEClass, BFEATURE__FIELD_TYPE);
 		createEOperation(bFeatureEClass, BFEATURE___IS_MANY);
 		createEOperation(bFeatureEClass, BFEATURE___IS_READONLY);
 
 		bSimpleFeatureEClass = createEClass(BSIMPLE_FEATURE);
-		createEReference(bSimpleFeatureEClass, BSIMPLE_FEATURE__TYPE);
 		createEOperation(bSimpleFeatureEClass, BSIMPLE_FEATURE___IS_ID);
 		createEOperation(bSimpleFeatureEClass, BSIMPLE_FEATURE___IS_DOMAIN_KEY);
 		createEOperation(bSimpleFeatureEClass, BSIMPLE_FEATURE___IS_DOMAIN_DESCRIPTION);
@@ -651,7 +651,7 @@ public class BeansPackageImpl extends EPackageImpl implements BeansPackage {
 		bFeatureEClass.getESuperTypes().add(this.getBAnnotationsable());
 		bFeatureEClass.getESuperTypes().add(this.getBPropertiesable());
 		bSimpleFeatureEClass.getESuperTypes().add(this.getBFeature());
-		bCollectionFeatureEClass.getESuperTypes().add(this.getBSimpleFeature());
+		bCollectionFeatureEClass.getESuperTypes().add(this.getBFeature());
 		bMapFeatureEClass.getESuperTypes().add(this.getBFeature());
 
 		// Initialize classes, features, and operations; add parameters
@@ -693,13 +693,13 @@ public class BeansPackageImpl extends EPackageImpl implements BeansPackage {
 		initEReference(getBFeature_Field(), theTypesPackage.getJvmField(), null, "field", null, 0, 1, BFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBFeature_Getter(), theTypesPackage.getJvmOperation(), null, "getter", null, 0, 1, BFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getBFeature_Setter(), theTypesPackage.getJvmOperation(), null, "setter", null, 0, 1, BFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getBFeature_FieldType(), this.getBType(), null, "fieldType", null, 1, 1, BFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getBFeature__IsMany(), ecorePackage.getEBoolean(), "isMany", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getBFeature__IsReadonly(), ecorePackage.getEBoolean(), "isReadonly", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEClass(bSimpleFeatureEClass, BSimpleFeature.class, "BSimpleFeature", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getBSimpleFeature_Type(), this.getBType(), null, "type", null, 1, 1, BSimpleFeature.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getBSimpleFeature__IsId(), ecorePackage.getEBoolean(), "isId", 0, 1, IS_UNIQUE, IS_ORDERED);
 

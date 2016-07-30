@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/org.beans.model/src" modelPluginID="org.beans.model"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/com.lunifera.beantypes.model/src" editDirectory="/com.lunifera.beantypes.model.edit/src"
+    editorDirectory="/com.lunifera.beantypes.model.editor/src" modelPluginID="com.lunifera.beantypes.model"
     modelName="Beans" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
+    editPluginID="com.lunifera.beantypes.model.edit" editorPluginID="com.lunifera.beantypes.model.editor"
     usedGenPackages="../../org.eclipse.xtext.common.types/model/JavaVMTypes.genmodel#//types"
     operationReflection="true" importOrganizing="true">
   <foreignModel>beans.ecore</foreignModel>
@@ -42,11 +44,11 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/field"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/getter"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/setter"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BFeature/fieldType"/>
       <genOperations ecoreOperation="beans.ecore#//BFeature/isMany"/>
       <genOperations ecoreOperation="beans.ecore#//BFeature/isReadonly"/>
     </genClasses>
     <genClasses image="false" ecoreClass="beans.ecore#//BSimpleFeature">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference beans.ecore#//BSimpleFeature/type"/>
       <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isId"/>
       <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isDomainKey"/>
       <genOperations ecoreOperation="beans.ecore#//BSimpleFeature/isDomainDescription"/>
