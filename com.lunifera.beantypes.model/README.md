@@ -9,7 +9,7 @@ The implementation uses proxies for lazy loading stuff.
 
 
 Idea:
-```
+
 @Inject
 IBeanTypeProvider provider;
 
@@ -26,4 +26,3 @@ if(feature instanceof BSimpleFeature) {
 	// lazy loading will create a new BeanTypesResource
 	BBeanType featureType = feature.getType();
 }
-```
